@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: ZhiYi-N/script
+          repository: LOLATM/hundun/script
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -35,9 +35,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【抖音极速版】'
+      - name: '运行 【抖音火山版】'
         run: |
-          node dyjsb.js
+          node huoshan.js
         env:
           SIGNHEADER: ${{ secrets.SIGNHEADER }}
           SIGNCOOKIE: ${{ secrets.SIGNCOOKIE }}

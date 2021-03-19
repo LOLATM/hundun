@@ -25,7 +25,7 @@ cookies2 = ""
 cookiesList = [cookies1, ]   # 多账号准备
 
 # 默认不自动提现
-autoTakeOut = False
+autoTakeOut = true
 # 提现金额
 amount = 20
 takeOutType = 1
@@ -44,10 +44,10 @@ if "AUTO_TAKE_OUT" in os.environ:
     autoTakeOut = os.environ["AUTO_TAKE_OUT"]
 
 # 自定义设备命名,非必须 ;devices=["iPhone7P","huawei"];与cookiesList对应
-devices = []
+devices = [VIVO]
 notify_time = 23                            # 通知时间,24小时制,默认19
 XMLY_ACCUMULATE_TIME = 1                    # 希望刷时长的,此处置1,默认打开;关闭置0
-UserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 13_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 iting/1.0.12 kdtunion_iting/1.0 iting(main)/1.0.12/ios_1"
+UserAgent = "Dalvik/2.1.0 (Linux; U; Android 9; vivo Z1 Build/PKQ1.180819.001) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 iting/1.0.12 kdtunion_iting/1.0 iting(main)/1.0.12/ios_1"
 # 非iOS设备的需要的自行修改,自己抓包 与cookie形式类似
 
 def str2dict(str_cookie):
@@ -995,7 +995,7 @@ def task_out(cookies, body):
         'Content-Type': 'application/json;charset=utf-8',
         'Connection': 'keep-alive',
         'Accept': 'application/json, text/plain, */*',
-        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 iting/2.0.3 kdtunion_iting/1.0 iting(main)/2.0.3/ios_1',
+        'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 9; vivo Z1 Build/PKQ1.180819.001) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 iting/2.0.3 kdtunion_iting/1.0 iting(main)/2.0.3/ios_1',
         'Referer': 'https://m.ximalaya.com/growth-ssr-speed-welfare-center/page/withdraw',
         'Accept-Language': 'zh-cn',
         'Accept-Encoding': 'gzip, deflate, br',
